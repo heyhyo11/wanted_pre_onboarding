@@ -1,3 +1,5 @@
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgheyhyo11%2Fwanted_pre_onboarding%2Fedit%2Fmainhit-counter&count_bg=%23AE0909&title_bg=%23414445&icon=&icon_color=%23D0D0D0&title=visitors&edge_flat=true)](https://hits.seeyoufarm.com)
+
 # wanted_pre_onboarding
 * 원티드 프리온보딩 백엔드 코스 사전과제입니다.
 * **지원 접수**: 2022.06.08(수) ~ 2022.06.22(수) 19시

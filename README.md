@@ -29,7 +29,7 @@
 
 ***
 
-### 요구사항
+### 요구사항 및 구현화면
 **1. 채용공고를 등록합니다.**
 ```python
 {
@@ -40,6 +40,9 @@
   "사용기술":"Python"
 }
 ```
+<img src='https://user-images.githubusercontent.com/96091519/174994264-e7ce3f85-940a-44fc-b8d1-749b4a5c4943.JPG'>
+
+***
 
 **2. 채용공고를 수정합니다. (회사 id 이외 모두 수정 가능)**
 
@@ -51,9 +54,16 @@
   "사용기술":"Python"
 }
 ```
+<img src='https://user-images.githubusercontent.com/96091519/174994997-c5e78e22-8c61-4b5f-9c43-55ae1439ec29.JPG'>
+
+***
 
 **3. 채용공고를 삭제합니다.**
 * DB에서 삭제된다.
+
+<img src='https://user-images.githubusercontent.com/96091519/174995287-37ab99be-f519-4f06-9b60-9aa7e8f1ff79.JPG'>
+
+***
 
 
 **4. [일부 가산점] 채용공고 목록을 가져옵니다.**
@@ -81,6 +91,10 @@
   ...
 ]
 ```
+
+<img src='https://user-images.githubusercontent.com/96091519/174995651-2f5764f5-71ce-484f-9b57-ebefb07a7387.JPG'>
+
+***
 
 * 채용공고 검색기능 구현(선택사항 및 가산점 요소)
 ```python
@@ -130,6 +144,10 @@
 ]
 ```
 
+<img src='https://user-images.githubusercontent.com/96091519/174996274-cd266947-1607-4e55-9424-68afd39c26a9.JPG'>
+
+***
+
 **5. [일부 가산점] 채용 상세페이지를 가져옵니다.**
 ```python
 {
@@ -145,6 +163,10 @@
 }
 ``` 
 
+<img src='https://user-images.githubusercontent.com/96091519/174996631-ec4ed246-a878-4e95-b5aa-566ecabd2d77.JPG'>
+
+***
+
 **6. [가산점] 사용자는 채용공고에 지원합니다. (1회만)**
 
 ```python
@@ -153,3 +175,5 @@
   "사용자_id": 사용자_id
 }
 ```
+<img src='https://user-images.githubusercontent.com/96091519/174996926-4bf1628b-d1bb-4821-87f8-fe7f918784f4.JPG'>
+

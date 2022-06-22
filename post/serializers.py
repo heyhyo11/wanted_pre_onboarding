@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Company
+from .models import Post, Company, Application
 
 
 # 회사 시리얼라이저
@@ -72,3 +72,8 @@ class PostDetailSerializer(serializers.ModelSerializer):
         model = Post
         fields = ['post_id', 'company_name', 'country', 'region', 'position', 'prize', 'skill', 'content', 'other_posts']
 
+# 채용공고 지원
+class ApplicationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Application
+        fields = ['post_id', 'user_id']

@@ -4,8 +4,10 @@ from rest_framework.views import APIView
 from rest_framework.generics import get_object_or_404
 from rest_framework.filters import SearchFilter
 
-from .serializers import PostCreateSerializer, PostPutSerializer, PostGetSerializer, PostDetailSerializer
-from .models import Post
+from .serializers import PostCreateSerializer, PostPutSerializer, PostGetSerializer, PostDetailSerializer, \
+    ApplicationSerializer
+from .models import Post, Application
+
 
 # 4-2. 채용공고 검색기능 구현
 class PostListView(generics.ListAPIView):
@@ -13,6 +15,7 @@ class PostListView(generics.ListAPIView):
     serializer_class = PostGetSerializer
     filter_backends = [SearchFilter]
     search_fields = ['company_id__company_name', 'company_id__country', 'company_id__region', 'position', 'prize', 'skill']
+
 
 class PostsAPIView(APIView):
     # 4-1. 채용공고 목록을 가져옵니다.
@@ -28,6 +31,7 @@ class PostsAPIView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+
 
 class PostAPIView(APIView):
     # 05. 채용 상세페이지 가져옵니다.
@@ -51,3 +55,8 @@ class PostAPIView(APIView):
         post = get_object_or_404(Post, post_id=pk)
         post.delete()
         return Response({"message": '삭제완료!'}, status=status.HTTP_200_OK)
+
+
+class ApplicationAPIGenerics(generics.ListCreateAPIView):
+    queryset = Application.objects.all()
+    serializer_class = ApplicationSerializer

@@ -50,6 +50,7 @@ class PostDetailSerializer(serializers.ModelSerializer):
     region = serializers.SerializerMethodField()
     other_posts = serializers.SerializerMethodField()
 
+    # company 안에 있는 변수들
     def get_company_name(self, obj):
         return obj.company_id.company_name
 

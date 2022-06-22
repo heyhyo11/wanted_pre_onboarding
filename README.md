@@ -23,6 +23,25 @@
 
 ***
 
+### 기본 세팅
+
+```
+pip install -r requirements.txt
+```
+
+```python
+# post/tests.py
+## SECRET_KEY 생성
+
+import string, random
+# Get ascii Characters numbers and punctuation (minus quote characters as they could terminate string).
+chars = ''.join([string.ascii_letters, string.digits, string.punctuation]).replace('\'', '').replace('"', '').replace('\\', '')
+SECRET_KEY = ''.join([random.SystemRandom().choice(chars) for i in range(50)])
+print(SECRET_KEY)
+```
+
+***
+
 ### 전체 API (swagger 이미지)
 
 <img src='https://user-images.githubusercontent.com/96091519/174990580-17e9f794-b8cb-4643-b82f-a9898bd2202e.JPG'>

@@ -6,24 +6,24 @@
 
 ***
 
-### 과제 안내
+### 🎬 과제 안내
 * 아래 서비스 개요 및 요구사항을 만족하는 REST API 서버를 구현합니다.
 * 사용가능 언어와 프레임워크: Python - Django, Flask / Javascript - Node.js(Express, NestJS)
 * 선택한 언어와 프레임워크: **Python - DJango**
 
 
-### 서비스 개요
+### 🎬 서비스 개요
 * 본 서비스는 기업의 채용을 위한 웹 서비스입니다.
 * 회사는 채용공고를 생성하고, 이에 사용자는 지원합니다.
 
-### 필수 기술요건
+### 🎬 필수 기술요건
 * REST API로 구현.
 * ORM 사용하여 구현.
 * RDBMS 사용 - **SQLite** 선택
 
 ***
 
-### 기본 세팅
+### 🎬 기본 세팅
 
 ```
 pip install -r requirements.txt
@@ -42,13 +42,13 @@ print(SECRET_KEY)
 
 ***
 
-### 전체 API (swagger 이미지)
+### 🎬 전체 API (swagger 이미지)
 
 <img src='https://user-images.githubusercontent.com/96091519/174990580-17e9f794-b8cb-4643-b82f-a9898bd2202e.JPG'>
 
 ***
 
-### 요구사항 및 구현화면
+### 🎬 요구사항 및 구현화면
 **1. 채용공고를 등록합니다.**
 ```python
 {

@@ -12,7 +12,7 @@ class PostListView(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostGetSerializer
     filter_backends = [SearchFilter]
-    search_fields = ['position']
+    search_fields = ['company_id__company_name', 'company_id__country', 'company_id__region', 'position', 'prize', 'skill']
 
 class PostsAPIView(APIView):
     # 4-1. 채용공고 목록을 가져옵니다.

@@ -25,10 +25,22 @@ class PostPutSerializer(serializers.ModelSerializer):
 
 # 사용자 채용공고 전체 조회
 class PostGetSerializer(serializers.ModelSerializer):
-    company_name = CompanySerializer()
+    company_name = serializers.SerializerMethodField()
+    country = serializers.SerializerMethodField()
+    region = serializers.SerializerMethodField()
+
+    def get_company_name(self, obj):
+        return obj.company_id.company_name
+
+    def get_country(self, obj):
+        return obj.company_id.country
+
+    def get_region(self, obj):
+        return obj.company_id.region
+
     class Meta:
         model = Post
-        fields = ['post_id', 'company_id', 'position', 'prize', 'skill']
+        fields = ['post_id', 'company_name', 'country', 'region', 'position', 'prize', 'skill']
 
 
 # 사용자 채용공고 조회

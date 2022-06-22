@@ -56,7 +56,7 @@ class PostAPIView(APIView):
         post.delete()
         return Response({"message": '삭제완료!'}, status=status.HTTP_200_OK)
 
-
+# 06. 사용자는 채용공고에 지원합니다.
 class ApplicationAPIGenerics(generics.ListCreateAPIView):
     queryset = Application.objects.all()
     serializer_class = ApplicationSerializer
